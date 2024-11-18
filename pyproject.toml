@@ -1,0 +1,24 @@
+[project]
+name = "h2o-llmstudio"
+version = "1.14.0-dev"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+exclude = "(.eggs|.git|.hg|.mypy_cache|.nox|.tox|.venv|.svn|_build|buck-out|build/|dist/|output/|data/)"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 88
+
+[tool.mypy]
+ignore_missing_imports = true
+allow_redefinition = true
+strict_optional = false
+exclude = "(build|output|data|tests)"
